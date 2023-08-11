@@ -1,15 +1,4 @@
-<?php
 
-// include 'db.php';
-
-// if(isset($_SESSION['Profile'])){
-
-//     $q = "SELECT * FROM `users` WHERE `FullName`='$_SESSION['Profile']";
-//     $row = mysqli_query($db,$q);
-//     $data = mysqli_fetch_assoc($row);
-// }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +18,33 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>.login1{display: block !important;}.login2{display: none !important;}</style>
 
 </head>
+<?php
+
+include 'db.php';
+
+$_SESSION['Profile'] = $_COOKIE['email'];
+// echo $_COOKIE['email']; 
+if(isset($_SESSION['Profile'])){
+
+
+    $p = $_SESSION['Profile'];
+
+    $q = "SELECT * FROM `users` WHERE `Email`='$p'";
+    $row = mysqli_query($db,$q);
+    $data = mysqli_fetch_assoc($row);
+
+    $_SESSION['Id'] = $data['User_Id'];
+    $_SESSION['Username'] = $data['Username'];
+    $_SESSION['FullName'] = $data['FullName'];
+    $_SESSION['Email'] = $data['Email'];
+    $_SESSION['Role'] = $data['Role'];
+
+    echo "<style>.login1{display: none !important;} .login2{display: block !important;}</style>";
+}
+?>
 
 <body>
     <!-- Preloader -->
@@ -73,8 +87,12 @@
                                     </div>
                                 </div>
                                 <!-- Login -->
-                                <div class="login">
+                                <div class="login login1">
                                     <a href="login.php"><i class="fa fa-user" aria-hidden="true"></i> <span>Login</span></a>
+                                </div>
+                                <!-- Profile -->
+                                <div class="login login2">
+                                    <a href="profile.php"><i class="fa fa-user" aria-hidden="true"></i> <span><?php echo $_SESSION['Email']; ?></span></a>
                                 </div>
                                 <!-- Cart -->
                                 <div class="cart">

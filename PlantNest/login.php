@@ -48,22 +48,29 @@ include 'db.php';
 
         $e = $_POST['email']; 
         $p = $_POST['password'];
-        $q = "SELECT * FROM `users` WHERE `Email` ='$e' AND `Password`='$p'";
-        $run = mysqli_query($db, $q);
-        $count = mysqli_num_rows($run);
+        $q1 = "SELECT * FROM `users` WHERE `Email` ='$e' AND `Password`='$p' AND `Role`='Admin'";
+        $q2 = "SELECT * FROM `users` WHERE `Email` ='$e' AND `Password`='$p'";
+        $run1 = mysqli_query($db, $q1);
+        $run2 = mysqli_query($db, $q2);
+        $count1 = mysqli_num_rows($run1);
+        $count2 = mysqli_num_rows($run2);
 
-        if($count == 1){
+        if($count1 == 1){
+        setcookie("admin", $e , time() + (86400 * 30) ,  "/");
+        $_SESSION['Admin'] = $_COOKIE['admin'];
+            echo "<script>window.open('Admin Panel/index.php','_self');</script>";
+        }elseif($count2 == 1){
+            
+            $profile = setcookie("email", $e , time() + (86400 * 30) ,  "/");
+            $_SESSION['Profile'] = $profile;
+            echo "<script>window.open('index.php','_self');</script>";
 
-        if($run['Role']=='Admin'){
-        }
-        $_SESSION['profile'] = $e;
-        header('location:profile.php');
+        }else{
 
-        }
-       else{
        echo "<div class='alert alert-warning'><b>Error!</b>Wrong Email or Password.</div>";
         }
-      }
+    }
+    
          ?>
         <input type="submit" name="go" class="btn btn-primary btn-block btn-lg" value="Sign in">              
     </form>			

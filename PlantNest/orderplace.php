@@ -183,104 +183,15 @@ $q = "SELECT * FROM `plants` WHERE Plant_Id='$Id'";
             <h2>Checkout</h2>
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
+       
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
+<br><br>
+    <center><h1 style="font-size: 48px;">Order Placed.</h1></center>
 
-    <!-- ##### Checkout Area Start ##### -->
-    <div class="checkout_area mb-100">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-7">
-                    <div class="checkout_details_area clearfix">
-                        <h5>Billing Details</h5>
-                        <form  method="POST">
-                            <div class="row">
-                                <div class="col-12 mb-4">
-                                    <label for="">Full-Name</label>
-                                    <input type="" class="form-control" id="email_address" value="">
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <label for="">Username</label>
-                                    <input type="" class="form-control" id="phone_number" min="0" value="">
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <label for="">Email</label>
-                                    <input type="Email" class="form-control" id="company" value="">
-                                </div>
-                                
-                            </div>
-                        
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-4">
-                    <div class="checkout-content">
-                        <h5 class="title--">Your Order</h5>
-                        <div class="products">
-                            <div class="products-data">
-                                <h5>Products:</h5>
-                                <div class="single-products d-flex justify-content-between align-items-center">
-                                    <p>Recuerdos Plant</p>
-                                    <h5><td class="price"><span>$<?php echo $_SESSION['PRK'] ?></span></td></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subtotal d-flex justify-content-between align-items-center">
-                            <h5>Subtotal</h5>
-                            <h5>$<?php  echo $_SESSION['total'] ?></h5>
-                        </div>
-                        <div class="shipping d-flex justify-content-between align-items-center">
-                            <h5>Shipping</h5>
-                            <h5> <?php $d_fees = 5; echo "$ $d_fees"; ?></h5>
-                        </div>
-                        <div class="order-total d-flex justify-content-between align-items-center">
-                            <h5>Order Total</h5>
-                            <h5>$<?php 
-                                $t = $_SESSION['total'];
-                                $s = $t + $d_fees;
-                                echo "$s";  
-
-
-                             ?></h5>
-                        </div>
-                        <div class="checkout-btn mt-30">
-                            <button href="orderplace.php" type="submit" class="btn alazea-btn w-100" name="PlaceOrder">Place Order</button> 
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php 
-    if(isset($_POST['PlaceOrder'])){
-    $order_date =  date('Y-m-d H:i:s');
-    $t = $_SESSION['total'];
-    $qty = $_SESSION['qty'];
-    $q = "INSERT INTO `orders`( `User_Id`, `Plant_Id`, `Quantity`, `Order_Date`, `Total_Amount`) VALUES ('1','$Id','$qty','$order_date','$t')";
-    // print_r($q); 
-    // exit();
-    mysqli_query($db, $q);
+    <center><span style="font-size: 28px;">To check your order go to <a href="profil.php" style="font-size: 28px;">Profile.</a></span></center>
+<br><br><br>
    
-}
-
-
-
-
-     ?>
-    <!-- ##### Checkout Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-img" style="background-image: url(img/bg-img/3.jpg);">
