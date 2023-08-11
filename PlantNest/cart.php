@@ -3,6 +3,7 @@
  include 'header.php';
 
  if(isset($_SESSION['cart'])){
+    
  $Id = $_SESSION['plant_id'];
  ?>
 

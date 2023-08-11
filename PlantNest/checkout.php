@@ -9,9 +9,9 @@ if (isset($_SESSION['Profile'])) {
 
 
     $Id = $_SESSION['plant_id'];
-    $q = "SELECT * FROM `plants` WHERE Plant_Id='$Id'";
+    $q1 = "SELECT * FROM `plants` WHERE Plant_Id='$Id'";
 
-    $row = mysqli_query($db, $q);
+    $row = mysqli_query($db, $q1);
 
     $data = mysqli_fetch_assoc($row);
 
@@ -112,11 +112,11 @@ if (isset($_SESSION['Profile'])) {
     if (isset($_POST['PlaceOrder'])) {
         $order_date =  date('Y-m-d H:i:s');
         $t = $_SESSION['total'];
+        $id = $_SESSION['Id'];
         $qty = $_SESSION['qty'];
-        $q = "INSERT INTO `orders`( `User_Id`, `Plant_Id`, `Quantity`, `Order_Date`, `Total_Amount`) VALUES ('1','$Id','$qty','$order_date','$t')";
-        // print_r($q); 
-        // exit();
-        mysqli_query($db, $q);
+        $q2 = "INSERT INTO `orders`( `User_Id`, `Plant_Id`, `Quantity`, `Order_Date`, `Total_Amount`) VALUES ('$id','$Id','$qty','$order_date','$t')";
+
+        mysqli_query($db, $q2);
 
         echo "<script>window.open('orderplaced.php','_self');</script>";
     }
