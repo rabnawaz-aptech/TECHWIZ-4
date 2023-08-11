@@ -1,132 +1,3 @@
-<?php
-
-
-include 'header.php';
-if (isset($_SESSION['Profile'])) {
-
-
-
-
-
-    $Id = $_SESSION['plant_id'];
-    $q = "SELECT * FROM `plants` WHERE Plant_Id='$Id'";
-
-    $row = mysqli_query($db, $q);
-
-    $data = mysqli_fetch_assoc($row);
-
-?>
-
-    <!-- ##### Breadcrumb Area Start ##### -->
-    <div class="breadcrumb-area">
-        <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
-            <h2>Checkout</h2>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Breadcrumb Area End ##### -->
-
-    <!-- ##### Checkout Area Start ##### -->
-    <div class="checkout_area mb-100">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-12 col-lg-7">
-                    <div class="checkout_details_area clearfix">
-                        <h5>Billing Details</h5>
-                        <form method="POST">
-                            <div class="row">
-                                <div class="col-12 mb-4">
-                                    <label for="">Full-Name</label>
-                                    <input type="" class="form-control" id="email_address" value="<?php echo $_SESSION['FullName']; ?>" disabled>
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <label for="">Username</label>
-                                    <input type="" class="form-control" id="phone_number" value="<?php echo $_SESSION['Username']; ?>" disabled>
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <label for="">Email</label>
-                                    <input type="Email" class="form-control" id="company" value="<?php echo $_SESSION['Email']; ?>" disabled>
-                                </div>
-
-                            </div>
-
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-4">
-                    <div class="checkout-content">
-                        <h5 class="title--">Your Order</h5>
-                        <div class="products">
-                            <div class="products-data">
-                                <h5>Products:</h5>
-                                <div class="single-products d-flex justify-content-between align-items-center">
-                                    <p>Recuerdos Plant</p>
-                                    <h5>
-                                        <td class="price"><span>$<?php echo $_SESSION['PRK'] ?></span></td>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subtotal d-flex justify-content-between align-items-center">
-                            <h5>Subtotal</h5>
-                            <h5>$<?php echo $_SESSION['total'] ?></h5>
-                        </div>
-                        <div class="shipping d-flex justify-content-between align-items-center">
-                            <h5>Shipping</h5>
-                            <h5> <?php $d_fees = 5;
-                                    echo "$ $d_fees"; ?></h5>
-                        </div>
-                        <div class="order-total d-flex justify-content-between align-items-center">
-                            <h5>Order Total</h5>
-                            <h5>$<?php
-                                    $t = $_SESSION['total'];
-                                    $s = $t + $d_fees;
-                                    echo "$s";
-
-
-                                    ?></h5>
-                        </div>
-                        <div class="checkout-btn mt-30">
-                            <button type="submit" class="btn alazea-btn w-100" name="PlaceOrder">Place Order</button>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php
-    if (isset($_POST['PlaceOrder'])) {
-        $order_date =  date('Y-m-d H:i:s');
-        $t = $_SESSION['total'];
-        $qty = $_SESSION['qty'];
-        $q = "INSERT INTO `orders`( `User_Id`, `Plant_Id`, `Quantity`, `Order_Date`, `Total_Amount`) VALUES ('1','$Id','$qty','$order_date','$t')";
-        // print_r($q); 
-        // exit();
-        mysqli_query($db, $q);
-
-        echo "<script>window.open('orderplaced.php','_self');</script>";
-    }
-
-
-
-
-    ?>
-    <!-- ##### Checkout Area End ##### -->
-
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-img" style="background-image: url(img/bg-img/3.jpg);">
         <!-- Main Footer Area -->
@@ -184,10 +55,10 @@ if (isset($_SESSION['Profile'])) {
                             <!-- Single Best Seller Products -->
                             <div class="single-best-seller-product d-flex align-items-center">
                                 <div class="product-thumbnail">
-                                    <a href="shop-details.php"><img src="img/bg-img/4.jpg" alt=""></a>
+                                    <a href="shop-details.html"><img src="img/bg-img/4.jpg" alt=""></a>
                                 </div>
                                 <div class="product-info">
-                                    <a href="shop-details.php">Cactus Flower</a>
+                                    <a href="shop-details.html">Cactus Flower</a>
                                     <p>$10.99</p>
                                 </div>
                             </div>
@@ -195,10 +66,10 @@ if (isset($_SESSION['Profile'])) {
                             <!-- Single Best Seller Products -->
                             <div class="single-best-seller-product d-flex align-items-center">
                                 <div class="product-thumbnail">
-                                    <a href="shop-details.php"><img src="img/bg-img/5.jpg" alt=""></a>
+                                    <a href="shop-details.html"><img src="img/bg-img/5.jpg" alt=""></a>
                                 </div>
                                 <div class="product-info">
-                                    <a href="shop-details.php">Tulip Flower</a>
+                                    <a href="shop-details.html">Tulip Flower</a>
                                     <p>$11.99</p>
                                 </div>
                             </div>
@@ -263,26 +134,3 @@ if (isset($_SESSION['Profile'])) {
         </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
-
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-    </body>
-
-    </html>
-
-<?php
-
-} else {
-    echo "<script>window.open('login.php','_self');</script>";
-}
-
-?>

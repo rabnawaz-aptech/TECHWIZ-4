@@ -5,7 +5,7 @@ session_unset();
 setcookie("email","", time() -3600 );
 setcookie("admin","", time() -3600 );
 
-// header('location:login.php');
+header('location:login.php');
 
 
 ?>

@@ -18,19 +18,23 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <style>.login1{display: block !important;}.login2{display: none !important;}</style>
+    <style>
+    .login1{display: block;}
+    .login2{display: none;}
+    </style>
 
 </head>
 <?php
 
 include 'db.php';
 
-$_SESSION['Profile'] = $_COOKIE['email'];
+// $_SESSION['Profile'] = $_COOKIE['email'];
 // echo $_COOKIE['email']; 
 if(isset($_SESSION['Profile'])){
 
 
-    $p = $_SESSION['Profile'];
+    $_SESSION['Email'] = $_COOKIE['email'];
+    $p = $_SESSION['Email'];
 
     $q = "SELECT * FROM `users` WHERE `Email`='$p'";
     $row = mysqli_query($db,$q);
@@ -48,12 +52,12 @@ if(isset($_SESSION['Profile'])){
 
 <body>
     <!-- Preloader -->
-    <div class="preloader d-flex align-items-center justify-content-center">
+    <!-- <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
         <div class="preloader-img">
             <img src="img/core-img/leaf.png" alt="">
         </div>
-    </div>
+    </div> -->
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
@@ -189,3 +193,5 @@ if(isset($_SESSION['Profile'])){
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
+
+    

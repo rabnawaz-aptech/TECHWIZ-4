@@ -61,8 +61,8 @@ include 'db.php';
             echo "<script>window.open('Admin Panel/index.php','_self');</script>";
         }elseif($count2 == 1){
             
-            $profile = setcookie("email", $e , time() + (86400 * 30) ,  "/");
-            $_SESSION['Profile'] = $profile;
+            setcookie("email", $e , time() + (86400 * 30) ,  "/");
+            $_SESSION['Profile'] = $_COOKIE['email'];
             echo "<script>window.open('index.php','_self');</script>";
 
         }else{
