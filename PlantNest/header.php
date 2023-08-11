@@ -1,6 +1,13 @@
 <?php
 
-include 'db.php';
+// include 'db.php';
+
+// if(isset($_SESSION['Profile'])){
+
+//     $q = "SELECT * FROM `users` WHERE `FullName`='$_SESSION['Profile']";
+//     $row = mysqli_query($db,$q);
+//     $data = mysqli_fetch_assoc($row);
+// }
 
 ?>
 
