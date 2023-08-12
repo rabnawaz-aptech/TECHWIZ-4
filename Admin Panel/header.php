@@ -169,23 +169,24 @@ $con=mysqli_connect("localhost","root","","plantnest");
                   <div data-i18n="Notifications">All Products</div>
                 </a>
               </li>
-              <li class="menu-item">
-                <a href="category.php" class="menu-link">
-                  <div data-i18n="Connections">Catergories</div>
-                </a>
-              </li>
+              
             </ul>
           </li>
           <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-              <div data-i18n="Authentications">Authentications</div>
+          <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-dock-top"></i>
+              <div data-i18n="Account Settings">Category Settings</div>
             </a>
             <ul class="menu-sub">
               
+            <li class="menu-item">
+                <a href="category.php" class="menu-link">
+                  <div data-i18n="Connections">Add Categories</div>
+                </a>
+              </li>
               <li class="menu-item">
-                <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                  <div data-i18n="Basic">Forgot Password</div>
+                <a href="allcategory.php" class="menu-link">
+                  <div data-i18n="Connections">All Categories</div>
                 </a>
               </li>
             </ul>
@@ -228,12 +229,13 @@ $con=mysqli_connect("localhost","root","","plantnest");
             <ul class="menu-sub">
               
               <li class="menu-item">
-                <a href="ui-typography.html" class="menu-link">
+                <a href="allusers.php
+                " class="menu-link">
                   <div data-i18n="Typography">All Users</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="ui-typography.html" class="menu-link">
+                <a href="usermessages.php" class="menu-link">
                   <div data-i18n="Typography">Messages</div>
                 </a>
               </li>
