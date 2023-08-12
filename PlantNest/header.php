@@ -55,12 +55,12 @@ if (isset($_SESSION['Profile'])) {
 
 <body>
     <!-- Preloader -->
-    <!-- <div class="preloader d-flex align-items-center justify-content-center">
+    <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
         <div class="preloader-img">
             <img src="img/core-img/leaf.png" alt="">
         </div>
-    </div> -->
+    </div>
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
@@ -73,8 +73,8 @@ if (isset($_SESSION['Profile'])) {
                         <div class="top-header-content d-flex align-items-center justify-content-between">
                             <!-- Top Header Content -->
                             <div class="top-header-meta">
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: infodeercreative@gmail.com</span></a>
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +1 234 122 122</span></a>
+                                <a href="contact.php" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: contact@plantnest.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +92 317-8873513</span></a>
                             </div>
 
                             <!-- Top Header Content -->
@@ -139,7 +139,7 @@ if (isset($_SESSION['Profile'])) {
                                 <ul>
                                     <li><a href="index.php">Home</a></li>
                                     <li><a href="about.php">About</a></li>
-                                    <li><a href="#">Pages</a>
+                                    <!-- <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="index.php">Home</a></li>
                                             <li><a href="about.php">About</a></li>
@@ -165,7 +165,7 @@ if (isset($_SESSION['Profile'])) {
                                             </li>
                                             <li><a href="contact.php">Contact</a></li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                     <li><a href="shop.php">Shop</a></li>
                                     <li><a href="portfolio.php">Portfolio</a></li>
                                     <li><a href="contact.php">Contact</a></li>
