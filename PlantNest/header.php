@@ -119,7 +119,7 @@ if (isset($_SESSION['Profile'])) {
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
                         <!-- Nav Brand -->
-                        <img src="img/core-img/logo2.png" alt="" height="105px" width="105px">
+                        <a href="index.php"><img src="img/core-img/logo4-removebg-preview.png" alt="" height="175px" width="175px" style="color: white;"></a>
                         <!-- <a href="index.php" class="nav-brand"><h3 style="color: #70C745;">Aleeza</h3></a> -->
 
                         <!-- Navbar Toggler -->
