@@ -73,8 +73,8 @@ if (isset($_SESSION['Profile'])) {
                         <div class="top-header-content d-flex align-items-center justify-content-between">
                             <!-- Top Header Content -->
                             <div class="top-header-meta">
-                                <a href="contact.php" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: contact@plantnest.com</span></a>
-                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +92 317-8873513</span></a>
+                                <a href="contact.php" data-toggle="tooltip" data-placement="bottom" title="Contact Us"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: contact@plantnest.com</span></a>
+                                <a href="tel:+11123456789" data-toggle="tooltip" data-placement="bottom" title="+11123456789"><i class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: 111-123-456-789</span></a>
                             </div>
 
                             <!-- Top Header Content -->
