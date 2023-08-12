@@ -1,16 +1,13 @@
 <?php
 
 include 'header.php';
-?>
 
 
-<?php  
+$q1="SELECT * FROM `plants`";
+$row=mysqli_query($db,$q1);
 
-$q="SELECT * FROM `plants`";
-$row=mysqli_query($con,$q);
-
-$q1="SELECT * FROM `categories`";
-$row1=mysqli_query($con,$q1);
+$q2="SELECT * FROM `categories`";
+$row1=mysqli_query($db,$q2);
 
 
 

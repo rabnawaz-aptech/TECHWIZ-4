@@ -1,12 +1,10 @@
 <?php
 
 include 'header.php';
-?>
 
-<?php
 
 $q="SELECT * FROM `contact`";
-$row=mysqli_query($con,$q);
+$row=mysqli_query($db,$q);
 
 
 ?>

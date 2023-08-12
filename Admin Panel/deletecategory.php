@@ -1,26 +1,21 @@
 <?php
 
 include 'header.php';
-?>
 
-
-<?php 
 
 
 $id=$_GET['Category_Id'];
-$q="DELETE FROM `categories` WHERE `Category_Id` = '$id'";
+$q1="DELETE FROM `categories` WHERE `Category_Id` = '$id'";
+$q2="DELETE FROM `plants` WHERE `Category_Id` = '$id'";
+$q3="DELETE FROM `orders` WHERE `Plant_Id` = '$id'";
 
-mysqli_query($con,$q);
+mysqli_query($db,$q3);
+mysqli_query($db,$q2);
+mysqli_query($db,$q1);
 
 echo "<script>window.open('allcategory.php','_self')</script>";
 
-?>
 
-
-
-
-
-<?php
 
 include 'footer.php';
 

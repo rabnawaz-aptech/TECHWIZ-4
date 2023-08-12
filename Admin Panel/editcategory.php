@@ -2,14 +2,12 @@
 
 include 'header.php';
 
-?>
 
-<?php
 
 $id=$_GET['Category_Id'];
 
-$q="SELECT * FROM `categories` WHERE `Category_Id` = '$id'";
-$row=mysqli_query($con,$q);
+$q1="SELECT * FROM `categories` WHERE `Category_Id` = '$id'";
+$row=mysqli_query($db,$q1);
 
 
 ?>
@@ -63,7 +61,7 @@ if(isset($_POST['update'])){
 
    
     $q2="UPDATE `categories` SET `Name`='$n' WHERE `Category_Id`='$id' ";
-    mysqli_query($con,$q2);
+    mysqli_query($db,$q2);
     echo "<script>window.open('allcategory.php','_self')</script>";
 }
 

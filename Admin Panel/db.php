@@ -1,5 +1,6 @@
 <?php 
 
-$con=mysqli_connect("loalhost","root","","plantnest");
+session_start();
+$db=mysqli_connect("localhost","root","","plantnest");
 
 ?>

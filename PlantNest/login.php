@@ -58,7 +58,7 @@ include 'db.php';
         if($count1 == 1){
         setcookie("admin", $e , time() + (86400 * 30) ,  "/");
         $_SESSION['Admin'] = $_COOKIE['admin'];
-            echo "<script>window.open('Admin Panel/index.php','_self');</script>";
+            echo "<script>window.open('../Admin Panel/index.php','_self');</script>";
         }elseif($count2 == 1){
             
             setcookie("email", $e , time() + (86400 * 30) ,  "/");

@@ -11,7 +11,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+    <title>PlantNest - Gardening &amp; Landscaping HTML Template</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -115,9 +115,9 @@ if(isset($_SESSION['Profile'])){
                 <div class="container">
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
-                    <!-- <img src="img/core-img/logo.png" alt=""> -->
                         <!-- Nav Brand -->
-                        <a href="index.php" class="nav-brand"><h3 style="color: #70C745;">Aleeza</h3></a>
+                        <img src="img/core-img/logo2.png" alt="" height="105px" width="105px">
+                        <!-- <a href="index.php" class="nav-brand"><h3 style="color: #70C745;">Aleeza</h3></a> -->
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">

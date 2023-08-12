@@ -3,9 +3,9 @@
 include 'header.php';
 
 $id=$_GET['Plant_Id'];
-$q="DELETE FROM `plants` WHERE `Plant_Id` = '$id'";
+$q1="DELETE FROM `plants` WHERE `Plant_Id` = '$id'";
 
-mysqli_query($con,$q);
+mysqli_query($db,$q1);
 
 echo "<script>window.open('allproduct.php','_self')</script>";
 

@@ -2,15 +2,13 @@
 
 include 'header.php';
 
-?>
-<?php 
 
 if(isset($_POST['add'])){
     $n=$_POST['Name'];
     
 
-    $q="INSERT INTO `categories` (`Name`) VALUES ('$n')";
-    mysqli_query($con,$q);
+    $q1="INSERT INTO `categories` (`Name`) VALUES ('$n')";
+    mysqli_query($db,$q1);
 }
 
 
