@@ -86,11 +86,11 @@ if (isset($_POST['submit'])) {
                             <div class="single-product-area mb-50">
 
                                 <div class="product-img">
-                                    <a href="shop-details.php?id=<?php echo $data['Plant_Id']; ?>"><img src="img/bg-img/40.png" alt=""></a>
+                                    <a href="shop-details.php?id=<?php echo $data['Plant_Id']; ?>"><img src="<?php echo $data['Image_Url']; ?>" alt=""></a>
                                     <!-- Product Tag -->
-                                    <div class="product-tag">
+                                    <!-- <div class="product-tag">
                                         <a href="#">Hot</a>
-                                    </div>
+                                    </div> -->
                                     <div class="product-meta d-flex">
                                         <!-- <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a> -->
                                         <!-- <a href="cart.php" class="add-to-cart-btn">Add to cart</a> -->

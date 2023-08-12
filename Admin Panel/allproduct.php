@@ -26,8 +26,8 @@ $row1=mysqli_query($db,$q2);
                       <th>ID</th>
                       <th>Name</th>
                       <th>Price</th>
-                      <th>Description</th>
-                      <th>Category</th>
+                      <!-- <th>Description</th> -->
+                      <th>Category Id</th>
                       <th>Image</th>
                       <th></th>
                       
@@ -47,7 +47,9 @@ $row1=mysqli_query($db,$q2);
                       <td>
                       <?php echo $data['Price']; ?>
                       </td>
-                      <td><?php echo $data['Description']; ?></td>
+                      <!-- </td>
+                      <td></td>
+                      <td> -->
                       <td>
                         <?php echo $data['Category_Id'];  ?>
                       </td>
