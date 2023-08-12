@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +17,13 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <style>
-    .login1{display: block;}
-    .login2{display: none;}
+        .login1 {
+            display: block;
+        }
+
+        .login2 {
+            display: none;
+        }
     </style>
 
 </head>
@@ -30,14 +33,14 @@ include 'db.php';
 
 // $_SESSION['Profile'] = $_COOKIE['email'];
 // echo $_COOKIE['email']; 
-if(isset($_SESSION['Profile'])){
+if (isset($_SESSION['Profile'])) {
 
 
     $_SESSION['Email'] = $_COOKIE['email'];
     $p = $_SESSION['Email'];
 
     $q = "SELECT * FROM `users` WHERE `Email`='$p'";
-    $row = mysqli_query($db,$q);
+    $row = mysqli_query($db, $q);
     $data = mysqli_fetch_assoc($row);
 
     $_SESSION['Id'] = $data['User_Id'];
@@ -126,7 +129,6 @@ if(isset($_SESSION['Profile'])){
 
                         <!-- Menu -->
                         <div class="classy-menu">
-
                             <!-- Close Button -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
@@ -193,5 +195,3 @@ if(isset($_SESSION['Profile'])){
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
-
-    
