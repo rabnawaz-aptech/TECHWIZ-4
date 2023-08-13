@@ -357,6 +357,6 @@ if(isset($_SESSION['Admin'])){
         // include 'footer.php';
 
          } else{
-            header('location:../PlantNest/login.php');
+            header('location:../PlantNest/index.php');
         }
         ?>
