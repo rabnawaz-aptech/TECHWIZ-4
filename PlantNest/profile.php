@@ -128,8 +128,8 @@ if (isset($_SESSION['Profile'])) {
 
 
 <?php
-
     include 'footer.php';
+
 } else {
     echo "<script>window.open('login.php','_self');</script>";
 }

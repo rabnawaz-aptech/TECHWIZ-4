@@ -40,7 +40,7 @@ include 'db.php';
         </div>
         <div class="form-group small clearfix">
             <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
-            <a href="#" class="forgot-link">Forgot Password?</a>
+            <a href="signup.php" class="forgot-link">Dont have an Account? Signup.</a>
         </div> 
         <?php 
 
