@@ -39,8 +39,8 @@ include 'db.php';
             <input type="Password" pattern="(?=.*\d)(?=.*\W)(?=.*[a-z])(?=.*[A-Z]).{8,}"  class="form-control" name="password"  placeholder="Password" required="required">
         </div>
         <div class="form-group small clearfix">
-            <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
-            <a href="signup.php" class="forgot-link">Dont have an Account? Signup.</a>
+            <!-- <label class="checkbox-inline"><input type="checkbox"> Remember me</label> -->
+            <a href="signup.php" class="forgot-link" style="font-weight: bold; color: #000;">Dont have an Account? Signup.</a>
         </div> 
         <?php 
 
@@ -58,7 +58,7 @@ include 'db.php';
         if($count1 == 1){
         setcookie("admin", $e , time() + (86400 * 30) ,  "/");
         $_SESSION['Admin'] = $_COOKIE['admin'];
-            echo "<script>window.open('../Admin Panel/index.php','_self');</script>";
+            echo "<script>window.open('Admin Panel/index.php','_self');</script>";
         }elseif($count2 == 1){
             
             setcookie("email", $e , time() + (86400 * 30) ,  "/");
